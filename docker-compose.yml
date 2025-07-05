@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  catalog:
+    build: ./catalog
+    ports:
+      - "8001:8000"  # Хост:Контейнер
+  
+  orders:
+    build: ./orders
+    ports:
+      - "8002:8000"  # Хост:Контейнер
+  
+  gateway:
+    build: ./gateway
+    ports:
+      - "8000:8000" 
