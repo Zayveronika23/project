@@ -1,12 +1,8 @@
-from fastapi import FastAPI, HTTPException, Request, Depends
+from fastapi import FastAPI
 import requests
 
 app = FastAPI()
 
-# SERVICES = {
-#     "catalog": "http://catalog:8000",
-#     "orders": "http://orders:8000"
-# }
 
 @app.get("/{id}")
 def get_product_from_catalog(product_id: int):

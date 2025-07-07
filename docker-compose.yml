@@ -4,12 +4,17 @@ services:
   catalog:
     build: ./catalog
     ports:
-      - "8001:8000"  # Хост:Контейнер
+      - "8001:8000"
   
   orders:
     build: ./orders
     ports:
-      - "8002:8000"  # Хост:Контейнер
+      - "8002:8000"
+
+  userservice:
+    build: ./userservice
+    ports:
+      - "8003:8000" 
   
   gateway:
     build: ./gateway
